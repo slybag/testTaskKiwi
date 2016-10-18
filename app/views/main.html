@@ -1,0 +1,27 @@
+<div id="filters">
+
+  <div class="form-group box top">
+    <label for="fromInput">From</label>
+    <autocomplete ng-model="from" data="departureDateInput" on-type="updateFrom" id="fromInput"></autocomplete>
+  </div>
+
+  <div class="form-group box top">
+    <label for="toInput">To</label>
+    <autocomplete ng-model="to" data="arrivalDateInput" on-type="updateTo" id="toInput"></autocomplete>
+  </div>
+
+  <div class="form-group box top">
+    <label for="dateFromInput">Date From</label>
+    <input type="text" ng-model="dateFrom" class="form-control" id="dateFromInput" placeholder="DD/MM/YYYY"/>
+  </div>
+
+  <div class="form-group box top">
+    <label for="dateToInput">Date To</label>
+    <input type="text" ng-model="dateTo" class="form-control" id="dateToInput" placeholder="DD/MM/YYYY"/>
+  </div>
+
+  <button type="submit" ng-click="search()">Search</button>
+
+
+  <table id="results" class="table"></table>
+</div>
